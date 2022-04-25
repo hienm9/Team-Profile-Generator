@@ -10,8 +10,8 @@ const Intern = require('./lib/Intern');
 const Manager = require('./lib/Manager');
 
 // Create empty arrays for team and id as place holders
-const teamArr = [];
-const idArr = [];
+const teamMembers = [];
+const ids = [];
 
 // Start application
 function init() {
@@ -56,7 +56,7 @@ function init() {
             {
                 type: "input",
                 name: "managerOfficeNumber",
-                message: "What's the manager's office number? (format: 111111111)",
+                message: "Enter the manager's office number? (format 9 numbers: 2224446666)",
                 validate: answer => {
                     const pass = answer.match(
                         /^[1-9]\d*$/
@@ -64,16 +64,59 @@ function init() {
                     if (pass) {
                         return true;
                     }
-                    return "Please enter a correct phone number.";
+                    return "Please re-enter the correct phone number.";
                 }
             }
         ]).then(answers => {
             const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOfficeNumber);
-            teamArr.push(manager);
-            idArr.push(answers.managerId);
-            addTeam();
+            teamMembers.push(manager);
+            ids.push(answers.managerId);
+            // call function to create team
+            createTeam();
         });
     }
+
+    // function create team after manager added
+    function createTeam(){
+        inquirer.prompt([
+        {
+            type: "list",
+            name: "memberChoice",
+            message: "Select a team member-type to add next",
+            choices: [
+                "Engineer",
+                "Intern",
+                "No additional team member type. Close application"
+            ]
+        }    
+        ]).then(userChoice => {
+            switch (userChoice.memberChoice) {
+                case "Engineer":
+                    addEngineer();
+                    break;
+                case "Intern":
+                    addIntern();
+                    break;
+                default:
+                    displayTeam();
+            }
+        });
+    }
+// TODO add engineer team
+    function addEngineer(){
+
+    }
+
+// TODO add intern team
+    function addIntern() {
+
+    }
+
+// TODO display team
+    function displayTeam() {
+
+    }
+
 
     createManager();
 }
