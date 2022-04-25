@@ -95,5 +95,27 @@ const createTeam = team => {
         `;
     };
 
+    //initialize the html page as an array
+    const html = [];
+
+  // push the html with the team data
+    html.push(team
+        //use filter to arrange the same team type together
+        .filter(employee => employee.getRole() === 'Manager')
+        .map(manager => createManager(manager))
+    );
+    html.push(team
+        .filter(employee => employee.getRole() === 'Engineer')
+        .map(engineer => createEngineer(engineer))
+        .join("")
+    );
+    html.push(team
+        .filter(employee => employee.getRole() === 'Intern')
+        .map(intern => createIntern(intern))
+        .join("")
+    );
+
+    return html.join("");
+
 }
 

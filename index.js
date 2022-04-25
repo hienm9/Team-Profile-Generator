@@ -93,7 +93,7 @@ function init() {
             choices: [
                 "Engineer",
                 "Intern",
-                "No additional team member type. Close application"
+                "Done adding team member. Close application"
             ]
         }    
         ]).then(userChoice => {
