@@ -7,17 +7,17 @@ test('create an employee object', () => {
   expect(employee.getName()).toBe('Grace');
 });
 
-test('create an employee object2', () => {
+test('Set email with constructor', () => {
   const employee = new Employee('Grace','4','g@email.com');
   expect(employee.getEmail()).toBe('g@email.com');
 });
 
-test('create an employee object3', () => {
+test('Set id with constructor', () => {
   const employee = new Employee('Grace','4','g@email.com');
   expect(employee.getId()).toBe('4');
 });
 
-test('create an employee object3', () => {
+test('getRole() should return employee', () => {
   const employee = new Employee('Grace','4','g@email.com');
   expect(employee.getRole()).toBe('Employee');
 });
