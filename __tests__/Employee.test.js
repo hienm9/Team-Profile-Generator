@@ -1,6 +1,6 @@
 const Employee = require('../lib/Employee');
 
-// add tests
+// add employee tests name, id, email, role
 
 test('create an employee object', () => {
   const employee = new Employee('Grace','4','g@email.com');
@@ -21,3 +21,4 @@ test('getRole() should return employee', () => {
   const employee = new Employee('Grace','4','g@email.com');
   expect(employee.getRole()).toBe('Employee');
 });
+
