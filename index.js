@@ -225,7 +225,7 @@ function init() {
         if (!fs.existsSync(output_Dir)) {
             fs.mkdirSync(output_Dir)
         }
-        console.log("Generating Team Profile.... ");
+        console.log("Team Profile generated.... ");
         fs.writeFileSync(output_Path, render(teamMembers), "utf-8");
     }
 
