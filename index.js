@@ -13,6 +13,7 @@ const Manager = require('./lib/Manager');
 // output directory and path
 const output_Dir = path.resolve(__dirname, "dist");
 const output_Path = path.join(output_Dir, 'index.html');
+let diplayPath = './dist/index.html';
 
 const render = require('./src/page-template.js');
 
@@ -225,7 +226,7 @@ function init() {
         if (!fs.existsSync(output_Dir)) {
             fs.mkdirSync(output_Dir)
         }
-        console.log("Team Profile generated.... ");
+        console.log("Team Profile generated successfully! in " + diplayPath);
         fs.writeFileSync(output_Path, render(teamMembers), "utf-8");
     }
 

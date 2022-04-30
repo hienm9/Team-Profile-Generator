@@ -1,6 +1,6 @@
 const Manager = require('../lib/Manager');
 
-// add tests name, id, email, officeNumber, role
+// add Manager tests: name, id, email, officeNumber, role
 
 test("Can set office number via constructor argument", () => {
   const testValue = 100;

@@ -3,10 +3,12 @@ This is command-line application using Node.js that takes in information about e
 
 ### Github: https://github.com/hienm9/Team-Profile-Generator
 
-### My walthrough video: 
+### My walthrough video: https://drive.google.com/file/d/1G1Zo_TBD2ve6Y-SdZn4RWRLVr7OFeUl7/view
 
 
-# Acceptance criteria
+## Acceptance criteria
+
+```
 GIVEN a command-line application that accepts user input
 WHEN I am prompted for my team members and their information
 THEN an HTML file is generated that displays a nicely formatted team roster based on user input
@@ -24,17 +26,24 @@ WHEN I select the intern option
 THEN I am prompted to enter the intern’s name, ID, email, and school, and I am taken back to the menu
 WHEN I decide to finish building my team
 THEN I exit the application, and the HTML is generated
+```
 
 ## Screenshots
 
-![](https://github.com/hienm9/)
+![](https://github.com/hienm9/Team-Profile-Generator/blob/main/assets/images/Profile%20html.png)
+
+![](https://github.com/hienm9/Team-Profile-Generator/blob/main/assets/images/Tests.png)
+
+![](https://github.com/hienm9/Team-Profile-Generator/blob/main/assets/images/Run%20tests.png)
 
 
-# Technology used
-Node.js
-Inquirer.js
-Jest
-NPM
-Bootstrap
+## Technology used
+<p><a href="https://nodejs.org/">Node.js</a></p>
+<p><a href="https://www.npmjs.com/">NPM</a></p>
+<p><a href="https://www.npmjs.com/package/inquirer">Inquirer.js</a></p>
+<p><a href="https://jestjs.io/docs/getting-started">Jest</a></p>
+<p><a href="https://getbootstrap.com/">Jest</a></p>
 
+
+## Contributor
 Hien Mai @2022 All Rights Reserved.
