@@ -46,7 +46,5 @@ THEN I exit the application, and the HTML is generated
 
 
 ## Contributors
-```
-Thanks to Trilogy Education Services for the start code
+
 Hien Mai @2022 All Rights Reserved.
-```
